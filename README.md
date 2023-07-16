@@ -5,6 +5,7 @@ Convert XML to JSON.
 This is a non-preserving shell pipe converter from XML to JSON.
 
 - Currently written in Python3
+- Sadly this is **not incremental**, hence the complete XML/JSON must fit in your RAM
 
 It tries to be clever, such that you can easily post-process the XML using `jq`.
 
@@ -16,6 +17,10 @@ It tries to be clever, such that you can easily post-process the XML using `jq`.
 - It converts `.` in names to `$`
   - `$` is a valid JavaScript identifier
   - allows to distinguish between `a$b` and `a.b`
+
+See also:
+
+- [json2sh](https://github.com/hilbix/json2sh) convert JSON into shell compatible output
 
 
 ## Usage
